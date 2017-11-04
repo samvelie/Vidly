@@ -10,20 +10,30 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        // GET: Movies
+        public ViewResult Index()
+        {
+            var movies = GetMovies();
+
+            return View(movies);
+        }
+
         public ActionResult Random()
         {
-            var movie = new Movie() { Name = "Shrek!" };
+            var movies = GetMovies().ToList();
+
+            int r = rnd.Next(movies.Count);
+
+            var randomMovie = movies[r];
 
             var customers = new List<Customer>
-            {
-                new Customer { Name = "Customer 1"},
-                new Customer { Name = "Customer 2"}
-            };
+             {
+                 new Customer { Name = "Customer 1" },
+                 new Customer { Name = "Customer 2" }
+             };
 
             var viewModel = new RandomMovieViewModel
             {
-                Movie = movie,
+                Movie = randomMovie,
                 Customers = customers
             };
             
@@ -37,20 +47,25 @@ namespace Vidly.Controllers
             return Content(year + "/" + month);
         }
 
-        public ActionResult Edit(int id)
+        private IEnumerable<Movie> GetMovies()
         {
-            return Content("id=" + id);
+            return new List<Movie>
+            {
+                new Movie
+                {
+                    Id=1,
+                    Name = "The Land Before Time"
+                },
+                new Movie
+                {
+                    Id=2,
+                    Name = "Shrek!"
+                }
+
+            };
         }
 
-        public ActionResult Index(int? pageIndex, string sortBy)
-        {
-            if (!pageIndex.HasValue)
-                pageIndex = 1;
+        private static System.Random rnd = new System.Random();
 
-            if (String.IsNullOrWhiteSpace(sortBy))
-                sortBy = "Name";
-
-            return Content(String.Format("pageIndex={0}&sortby={1}", pageIndex, sortBy)); 
-        }
     }
 }
