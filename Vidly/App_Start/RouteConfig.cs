@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace Vidly
@@ -14,12 +10,13 @@ namespace Vidly
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapMvcAttributeRoutes();
-
+            
+            //Route Order matters, first match is used
             //routes.MapRoute(
             //    "MoviesByReleaseDate",
             //    "movies/released/{year}/{month}",
             //    new { controller = "Movies", action = "ByReleaseDate" },
-            //    new { year = @"\d{4}", month = @"[1-9]|1[0-2]" }
+            //    new { year = @"^\d{4}$", month = @"[1-9]|1[0-2]" }
             //);
 
             routes.MapRoute(
