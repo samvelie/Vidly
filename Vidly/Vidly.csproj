@@ -218,6 +218,14 @@
     <Compile Include="Migrations\202006160201287_ApplyCustomerNameRestrictions.Designer.cs">
       <DependentUpon>202006160201287_ApplyCustomerNameRestrictions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006201900183_ModifyMembershipType.cs" />
+    <Compile Include="Migrations\202006201900183_ModifyMembershipType.Designer.cs">
+      <DependentUpon>202006201900183_ModifyMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006201901087_SeedMembershipTypeNames.cs" />
+    <Compile Include="Migrations\202006201901087_SeedMembershipTypeNames.Designer.cs">
+      <DependentUpon>202006201901087_SeedMembershipTypeNames.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -326,6 +334,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006160201287_ApplyCustomerNameRestrictions.resx">
       <DependentUpon>202006160201287_ApplyCustomerNameRestrictions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006201900183_ModifyMembershipType.resx">
+      <DependentUpon>202006201900183_ModifyMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006201901087_SeedMembershipTypeNames.resx">
+      <DependentUpon>202006201901087_SeedMembershipTypeNames.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
