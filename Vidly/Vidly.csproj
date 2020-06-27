@@ -238,6 +238,14 @@
     <Compile Include="Migrations\202006220133497_EstablishGenres.Designer.cs">
       <DependentUpon>202006220133497_EstablishGenres.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006271728012_UpdatingMovieModel1.cs" />
+    <Compile Include="Migrations\202006271728012_UpdatingMovieModel1.Designer.cs">
+      <DependentUpon>202006271728012_UpdatingMovieModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006271749289_UpdatingMovieModelAgain.cs" />
+    <Compile Include="Migrations\202006271749289_UpdatingMovieModelAgain.Designer.cs">
+      <DependentUpon>202006271749289_UpdatingMovieModelAgain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -368,6 +376,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202006220133497_EstablishGenres.resx">
       <DependentUpon>202006220133497_EstablishGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006271728012_UpdatingMovieModel1.resx">
+      <DependentUpon>202006271728012_UpdatingMovieModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006271749289_UpdatingMovieModelAgain.resx">
+      <DependentUpon>202006271749289_UpdatingMovieModelAgain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
